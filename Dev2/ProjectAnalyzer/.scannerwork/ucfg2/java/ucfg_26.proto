@@ -1,0 +1,16 @@
+
+7logic.Release#getReleaseDate()Ljava/time/LocalDateTime;L
+BD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/Release.java3 3($"1*ß
+1L
+BD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/Release.java4	 4(š
+—
+L
+BD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/Release.java4	 4(
+%0java.time.LocalDateTime"__id*"* 
+logic.Release"
+releaseDate"o
+L
+BD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/Release.java4 4(
+
+%0java.time.LocalDateTimeB
+logic.Release

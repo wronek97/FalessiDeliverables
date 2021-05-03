@@ -1,0 +1,57 @@
+
+Alogic.Ticket#getVersionIndex(Ljava/lang/String;Ljava/util/List;)IM
+AD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/Ticket.javaÌ Ì(#"2*î
+2M
+AD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/Ticket.javaÍ Í(u
+s
+M
+AD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/Ticket.javaÍ Í(
+rellogic.Release"__id*
+""š
+—
+M
+AD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/Ticket.javaÍ Í(
+rellogic.Release"
+__arrayGet*
+
+releasesjava.util.List*
+""*
+4
+1*‹
+3M
+AD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/Ticket.javaÏ Ï(ÝÚ
+M
+AD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/Ticket.javaÏ Ï( 	
+%2int"+java.util.List#indexOf(Ljava/lang/Object;)I*
+
+releasesjava.util.List*
+
+rellogic.Release2indexOf(Ljava/lang/Object;)"W
+M
+AD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/Ticket.javaÏ Ï(#
+""*ˆ
+4M
+AD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/Ticket.javaÎ Î(Â¿
+M
+AD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/Ticket.javaÎ Î(*
+%0java.lang.String".logic.Release#getVersionID()Ljava/lang/String;*
+
+rellogic.Release2getVersionID()æã
+M
+AD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/Ticket.javaÎ Î(+
+%1boolean",java.lang.String#equals(Ljava/lang/Object;)Z*
+
+	versionIDjava.lang.String*
+
+%0java.lang.String2equals(Ljava/lang/Object;)*
+2
+3*«
+1M
+AD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/Ticket.javaÒ	 Ò(
+"W
+M
+AD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/Ticket.javaÒ Ò(
+"":
+	versionIDjava.lang.String:
+releasesjava.util.ListB"
+logic.Ticket
