@@ -21,6 +21,8 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 public class Ticket {
+	public static final Logger logger = Logger.getLogger(Ticket.class.getName());
+	
 	private String ticketID;
 	private LocalDateTime openDate;
 	private LocalDateTime resolutionDate;
@@ -127,12 +129,7 @@ public class Ticket {
 		}
 		
 		// order tickets by open date
-		Comparator<Ticket> ticketComparator = new Comparator<Ticket>(){
-			//@Override
-			public int compare(Ticket t1, Ticket t2) {
-				return t1.getOpenDate().compareTo(t2.getOpenDate());
-			}
-		};
+		Comparator<Ticket> ticketComparator = (t1, t2) -> t1.getOpenDate().compareTo(t2.getOpenDate());
 		Collections.sort(tickets, ticketComparator);
 		
 		return tickets;
@@ -161,24 +158,6 @@ public class Ticket {
 		} catch (Exception e) {
 			Logger logger = Logger.getLogger(Ticket.class.getName());
 			logger.log(Level.SEVERE, "Error in csv writer", e);
-		}
-	}
-	
-	public static void printTickets(List<Ticket> tickets) {
-		for(Ticket t : tickets) {			
-			String ticketID = t.getTicketID();
-			String openDate = t.getOpenDate().toString();
-			String resolutionDate = t.getResolutionDate().toString();
-			int injectedVersion = t.getInjectedVersion();
-			int openVersion = t.getOpenVersion();
-			int fixedVersion = t.getFixedVersion();
-			
-			if(injectedVersion == 0) {
-				System.out.println(ticketID + "; " + openDate + "; " + resolutionDate + "; " + "Unknown" + "; " + openVersion + "; " + fixedVersion);
-			}
-			else if(injectedVersion < fixedVersion) {
-				System.out.println(ticketID + "; " + openDate + "; " + resolutionDate + "; " + injectedVersion + "; " + openVersion + "; " + fixedVersion);
-			}
 		}
 	}
 	
@@ -211,12 +190,15 @@ public class Ticket {
 			if(iv != 0) { //if IV is known
 				ov = t.getOpenVersion();
 				fv = t.getFixedVersion();
-				sum = sum + (fv-iv)/(fv-ov+1);
+				sum = sum + (double)(fv-iv)/(fv-ov+1);
 				k++;
 			}
 		}
+		if(k!=0) {
+			return (int) Math.round(sum/k);
+		}
 		
-		return (int) Math.round(sum/k);
+		return 0;
 	}
 	
 	private static int getVersionIndex(String versionID, List<Release> releases) {
@@ -238,8 +220,7 @@ public class Ticket {
 			for(int k = 1; k < orderedReleases.size(); k++) {
 				releaseDate = orderedReleases.get(k).getReleaseDate();
 				if(openDate.isBefore(releaseDate)) {
-					k++;
-					return k;
+					return k+1;
 				}
 			}
 		}
@@ -257,8 +238,7 @@ public class Ticket {
 			for(Integer k = 1; k < orderedReleases.size(); k++) {
 				releaseDate = orderedReleases.get(k).getReleaseDate();
 				if(resDate.isBefore(releaseDate)) {
-					k++;
-					return k;
+					return k+1;
 				}
 			}
 		}

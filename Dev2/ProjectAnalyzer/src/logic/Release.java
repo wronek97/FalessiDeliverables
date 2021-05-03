@@ -79,12 +79,7 @@ public class Release {
 		}
 		
 		// order releases by date
-		Comparator<Release> releaseComparator = new Comparator<Release>(){
-			//@Override
-			public int compare(Release r1, Release r2) {
-				return r1.getReleaseDate().compareTo(r2.getReleaseDate());
-			}
-		};
+		Comparator<Release> releaseComparator = (r1, r2) -> r1.getReleaseDate().compareTo(r2.getReleaseDate());
 		Collections.sort(releases, releaseComparator);
 		
 		return releases;
@@ -106,19 +101,6 @@ public class Release {
 		} catch (Exception e) {
 			Logger logger = Logger.getLogger(Release.class.getName());
 			logger.log(Level.SEVERE, "Error in csv writer", e);
-		}
-	}
-	
-	public static void printReleases(List<Release> releases) {
-		for(int k=0; k<releases.size(); k++) {
-			Release r = releases.get(k);
-			
-			String index = String.valueOf(k+1);
-			String id = r.getVersionID();
-			String name = r.getVersionName();
-			String releaseDate = r.getReleaseDate().toString();
-			
-			System.out.println(index + "; " + id + "; " + name + "; " + releaseDate);
 		}
 	}
 	
