@@ -1,0 +1,224 @@
+
+Alogic.Analyzer#getFilesName(Ljava/lang/String;IZ)Ljava/util/List;O
+CD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/Analyzer.javaö# ö(/"21*˛
+13P
+CD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/Analyzer.java§T §(ëüú
+P
+CD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/Analyzer.java§ §(í
+%10java.util.stream.Stream"Wjava.util.stream.Stream#filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;*
+
+%9java.util.stream.Stream*
+""2&filter(Ljava/util/function/Predicate;)*
+12*˚
+14O
+CD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/Analyzer.java§- §(Kùö
+O
+CD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/Analyzer.java§ §(L
+%9java.util.stream.Stream"Wjava.util.stream.Stream#filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;*
+
+%8java.util.stream.Stream*
+""2&filter(Ljava/util/function/Predicate;)*
+13*ı
+15O
+CD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/Analyzer.java§ §(óî
+O
+CD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/Analyzer.java§ §(%
+%8java.util.stream.Stream"Sjava.util.stream.Stream#map(Ljava/util/function/Function;)Ljava/util/stream/Stream;*!
+
+walkjava.util.stream.Stream*
+""2"map(Ljava/util/function/Function;)*
+14*˝
+16O
+CD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/Analyzer.java¢ ¢(?ú
+ô
+O
+CD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/Analyzer.java¢ ¢(?
+walkjava.util.stream.Stream"__id*
+
+%7java.util.stream.Stream*
+15
+9*Ô
+17O
+CD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/Analyzer.java¢ ¢(?ë
+é
+O
+CD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/Analyzer.java¢ ¢(?
+%7java.util.stream.Stream"gjava.nio.file.Files#walk(Ljava/nio/file/Path;[Ljava/nio/file/FileVisitOption;)Ljava/util/stream/Stream;*"
+java.nio.file.Files*
+
+%6java.nio.file.Path*
+16*Œ
+18O
+CD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/Analyzer.java¢ ¢(!y
+w
+O
+CD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/Analyzer.java¢1 ¢(=
+%5java.lang.String"__id*
+""ı
+Ú
+O
+CD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/Analyzer.java¢' ¢(>
+%6java.nio.file.Path"Rjava.nio.file.Paths#get(Ljava/lang/String;[Ljava/lang/String;)Ljava/nio/file/Path;*"
+java.nio.file.Paths*
+
+%5java.lang.String*
+17*—
+19O
+CD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/Analyzer.javaü ü(ò
+ï
+O
+CD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/Analyzer.javaü ü((
+%2java.util.List"__id*&*$
+logic.Analyzer"
+releaseCommitsò
+ï
+O
+CD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/Analyzer.javaü ü(/
+%3java.lang.String"
+__arrayGet*
+
+%2java.util.List*
+""¡
+æ
+O
+CD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/Analyzer.javaü ü(0
+
+%4void"1logic.Analyzer#switchVersion(Ljava/lang/String;)V*"
+logic.Analyzer*
+
+%3java.lang.Stringz
+x
+O
+CD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/Analyzer.java° °(
+filesjava.util.List"__id*
+""*
+18*Ö
+1O
+CD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/Analyzer.java∞ ∞(
+z
+x
+O
+CD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/Analyzer.java∞ ∞(
+%21java.lang.String"__id*
+""√
+¿
+O
+CD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/Analyzer.java∞ ∞( 
+%22void"1logic.Analyzer#switchVersion(Ljava/lang/String;)V*"
+logic.Analyzer*
+
+%21java.lang.String"m
+O
+CD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/Analyzer.java≤ ≤(
+
+resultjava.util.List*å
+4O
+CD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/Analyzer.java© ©(
+¨
+©
+O
+CD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/Analyzer.java© ©(
+%17void"
+__arrayAdd*
+
+resultjava.util.List*
+""*
+
+filesjava.util.List*
+19
+1*Ë
+5O
+CD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/Analyzer.javaß ß(iå
+â
+O
+CD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/Analyzer.javaß ß(i
+filesjava.util.List"__id*
+
+%16java.util.List*
+4*Ü
+6O
+CD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/Analyzer.javaß ß(i™ß
+O
+CD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/Analyzer.javaß ß(i
+%16java.util.List"Ojava.util.stream.Stream#collect(Ljava/util/stream/Collector;)Ljava/lang/Object;* 
+
+%14java.util.stream.Stream*#
+!
+%15java.util.stream.Collector2%collect(Ljava/util/stream/Collector;)*
+5*∂
+7O
+CD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/Analyzer.javaßU ß(_⁄
+◊
+O
+CD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/Analyzer.javaßU ß(h!
+%15java.util.stream.Collector"@java.util.stream.Collectors#toList()Ljava/util/stream/Collector;*"
+java.util.stream.Collectors*
+6*˚
+8O
+CD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/Analyzer.javaß- ß(Küú
+O
+CD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/Analyzer.javaß ß(L
+%14java.util.stream.Stream"Wjava.util.stream.Stream#filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;* 
+
+%13java.util.stream.Stream*
+""2&filter(Ljava/util/function/Predicate;)*
+7*Ù
+9O
+CD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/Analyzer.javaß ß(òï
+O
+CD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/Analyzer.javaß ß(%
+%13java.util.stream.Stream"Sjava.util.stream.Stream#map(Ljava/util/function/Function;)Ljava/util/stream/Stream;*!
+
+walkjava.util.stream.Stream*
+""2"map(Ljava/util/function/Function;)*
+8*í
+21O
+CD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/Analyzer.javaõ õ(/ÑÅ
+O
+CD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/Analyzer.javaõ" õ(-
+%0java.util.ArrayList"java.util.ArrayListñ
+ì
+O
+CD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/Analyzer.javaõ õ(/
+%1"java.util.ArrayList#<init>()V*
+
+%0java.util.ArrayListë
+é
+O
+CD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/Analyzer.javaõ õ(0
+resultjava.util.List"__id*
+
+%0java.util.ArrayList*
+19
+1*Î
+10P
+CD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/Analyzer.java§ §(Øç
+ä
+P
+CD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/Analyzer.java§ §(Ø
+filesjava.util.List"__id*
+
+%12java.util.List*
+4*ä
+11P
+CD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/Analyzer.java§ §(Ø´®
+P
+CD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/Analyzer.java§ §(Ø
+%12java.util.List"Ojava.util.stream.Stream#collect(Ljava/util/stream/Collector;)Ljava/lang/Object;* 
+
+%10java.util.stream.Stream*#
+!
+%11java.util.stream.Collector2%collect(Ljava/util/stream/Collector;)*
+10*º
+12Q
+CD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/Analyzer.java§õ §(•‹
+Ÿ
+Q
+CD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/Analyzer.java§õ §(Æ!
+%11java.util.stream.Collector"@java.util.stream.Collectors#toList()Ljava/util/stream/Collector;*"
+java.util.stream.Collectors*
+11:!
+fileExtensionjava.lang.String:
+"":
+""B"
+logic.Analyzer

@@ -183,49 +183,35 @@ public class FileMetrics {
 		try (FileWriter fileWriter = new FileWriter(outname)) {
 			StringBuilder outputBuilder = new StringBuilder(mode.getArgs());
 			
+			NumberFormat nf;
+			String sep ;
 			if(mode == CSV_Mode.IT) {
-				NumberFormat nf = NumberFormat.getInstance(Locale.ITALY);
+				nf = NumberFormat.getInstance(Locale.ITALY);
 			    nf.setGroupingUsed(false);
-			    
-				for (FileMetrics fm : fileMetrics) {
-					outputBuilder.append(fm.getVersion()+1 + ";");
-					outputBuilder.append(fm.getName().replace(projectPath + "\\", "") + ";");
-					outputBuilder.append(fm.getSize() + ";");
-					outputBuilder.append(fm.getLOCtouched() + ";");
-					outputBuilder.append(fm.getLOCadded() + ";");
-					outputBuilder.append(fm.getMAXLOCadded() + ";");
-					outputBuilder.append(nf.format(fm.getAVGLOCadded()) + ";");
-					outputBuilder.append(fm.getChurn() + ";");
-					outputBuilder.append(fm.getMAXchurn() + ";");
-					outputBuilder.append(nf.format(fm.getAVGchurn()) + ";");
-					outputBuilder.append(fm.getNR() + ";");
-					outputBuilder.append(fm.getNF() + ";");
-					outputBuilder.append(fm.isBugged() + "\n");
-				}
-				fileWriter.append(outputBuilder.toString());
+			    sep = ";";
 			}
 			else {
-				NumberFormat nf = NumberFormat.getInstance(Locale.US);
+				nf = NumberFormat.getInstance(Locale.US);
 			    nf.setGroupingUsed(false);
-			    
-				for (FileMetrics fm : fileMetrics) {
-					outputBuilder.append(fm.getVersion()+1 + ",");
-					outputBuilder.append(fm.getName().replace(projectPath + "\\", "") + ",");
-					outputBuilder.append(fm.getSize() + ",");
-					outputBuilder.append(fm.getLOCtouched() + ",");
-					outputBuilder.append(fm.getLOCadded() + ",");
-					outputBuilder.append(fm.getMAXLOCadded() + ",");
-					outputBuilder.append(nf.format(fm.getAVGLOCadded()) + ",");
-					outputBuilder.append(fm.getChurn() + ",");
-					outputBuilder.append(fm.getMAXchurn() + ",");
-					outputBuilder.append(nf.format(fm.getAVGchurn()) + ",");
-					outputBuilder.append(fm.getNR() + ",");
-					outputBuilder.append(fm.getNF() + ",");
-					outputBuilder.append(fm.isBugged() + "\n");
-				}
-				fileWriter.append(outputBuilder.toString());
+			    sep = ",";
 			}
-				
+			
+			for (FileMetrics fm : fileMetrics) {
+				outputBuilder.append(fm.getVersion()+1 + sep);
+				outputBuilder.append(fm.getName().replace(projectPath + "\\", "") + sep);
+				outputBuilder.append(fm.getSize() + sep);
+				outputBuilder.append(fm.getLOCtouched() + sep);
+				outputBuilder.append(fm.getLOCadded() + sep);
+				outputBuilder.append(fm.getMAXLOCadded() + sep);
+				outputBuilder.append(nf.format(fm.getAVGLOCadded()) + sep);
+				outputBuilder.append(fm.getChurn() + sep);
+				outputBuilder.append(fm.getMAXchurn() + sep);
+				outputBuilder.append(nf.format(fm.getAVGchurn()) + sep);
+				outputBuilder.append(fm.getNR() + sep);
+				outputBuilder.append(fm.getNF() + sep);
+				outputBuilder.append(fm.isBugged() + "\n");
+			}
+			fileWriter.append(outputBuilder.toString());
 			
 		} catch (Exception e) {
 			Logger logger = Logger.getLogger(Release.class.getName());
@@ -243,27 +229,27 @@ public class FileMetrics {
 			String trainingFile = savePath + Analyzer.ML_PATH + "\\" + "Training" + (k+1) + ".csv";
 			
 			try (FileWriter fileWriter = new FileWriter(trainingFile)) {
-				StringBuilder outputBuilder = new StringBuilder(CSV_Mode.US.getArgs().replace("FileName,", ""));
+				StringBuilder trainingBuilder = new StringBuilder(CSV_Mode.US.getArgs().replace("FileName,", ""));
 				NumberFormat nf = NumberFormat.getInstance(Locale.US);
 			    nf.setGroupingUsed(false);
 			    
 				for (FileMetrics fm : fileMetrics) {
 					if(fm.getVersion() < k) {
-						outputBuilder.append(fm.getVersion()+1 + ",");
-						outputBuilder.append(fm.getSize() + ",");
-						outputBuilder.append(fm.getLOCtouched() + ",");
-						outputBuilder.append(fm.getLOCadded() + ",");
-						outputBuilder.append(fm.getMAXLOCadded() + ",");
-						outputBuilder.append(nf.format(fm.getAVGLOCadded()) + ",");
-						outputBuilder.append(fm.getChurn() + ",");
-						outputBuilder.append(fm.getMAXchurn() + ",");
-						outputBuilder.append(nf.format(fm.getAVGchurn()) + ",");
-						outputBuilder.append(fm.getNR() + ",");
-						outputBuilder.append(fm.getNF() + ",");
-						outputBuilder.append(fm.isBugged() + "\n");
+						trainingBuilder.append(fm.getVersion()+1 + ",");
+						trainingBuilder.append(fm.getSize() + ",");
+						trainingBuilder.append(fm.getLOCtouched() + ",");
+						trainingBuilder.append(fm.getLOCadded() + ",");
+						trainingBuilder.append(fm.getMAXLOCadded() + ",");
+						trainingBuilder.append(nf.format(fm.getAVGLOCadded()) + ",");
+						trainingBuilder.append(fm.getChurn() + ",");
+						trainingBuilder.append(fm.getMAXchurn() + ",");
+						trainingBuilder.append(nf.format(fm.getAVGchurn()) + ",");
+						trainingBuilder.append(fm.getNR() + ",");
+						trainingBuilder.append(fm.getNF() + ",");
+						trainingBuilder.append(fm.isBugged() + "\n");
 					}
 				}
-				fileWriter.append(outputBuilder.toString());
+				fileWriter.append(trainingBuilder.toString());
 				
 			} catch (Exception e) {
 				Logger logger = Logger.getLogger(Release.class.getName());
@@ -283,27 +269,27 @@ public class FileMetrics {
 			String testFile = savePath + Analyzer.ML_PATH + "\\" + "Test" + (k+1) + ".csv";
 			
 			try (FileWriter fileWriter = new FileWriter(testFile)) {
-				StringBuilder outputBuilder = new StringBuilder(CSV_Mode.US.getArgs().replace("FileName,", ""));
+				StringBuilder testBuilder = new StringBuilder(CSV_Mode.US.getArgs().replace("FileName,", ""));
 				NumberFormat nf = NumberFormat.getInstance(Locale.US);
 			    nf.setGroupingUsed(false);
 			    
 				for (FileMetrics fm : fileMetrics) {
 					if(fm.getVersion() == k) {
-						outputBuilder.append(fm.getVersion()+1 + ",");
-						outputBuilder.append(fm.getSize() + ",");
-						outputBuilder.append(fm.getLOCtouched() + ",");
-						outputBuilder.append(fm.getLOCadded() + ",");
-						outputBuilder.append(fm.getMAXLOCadded() + ",");
-						outputBuilder.append(nf.format(fm.getAVGLOCadded()) + ",");
-						outputBuilder.append(fm.getChurn() + ",");
-						outputBuilder.append(fm.getMAXchurn() + ",");
-						outputBuilder.append(nf.format(fm.getAVGchurn()) + ",");
-						outputBuilder.append(fm.getNR() + ",");
-						outputBuilder.append(fm.getNF() + ",");
-						outputBuilder.append(fm.isBugged() + "\n");
+						testBuilder.append(fm.getVersion()+1 + ",");
+						testBuilder.append(fm.getSize() + ",");
+						testBuilder.append(fm.getLOCtouched() + ",");
+						testBuilder.append(fm.getLOCadded() + ",");
+						testBuilder.append(fm.getMAXLOCadded() + ",");
+						testBuilder.append(nf.format(fm.getAVGLOCadded()) + ",");
+						testBuilder.append(fm.getChurn() + ",");
+						testBuilder.append(fm.getMAXchurn() + ",");
+						testBuilder.append(nf.format(fm.getAVGchurn()) + ",");
+						testBuilder.append(fm.getNR() + ",");
+						testBuilder.append(fm.getNF() + ",");
+						testBuilder.append(fm.isBugged() + "\n");
 					}
 				}
-				fileWriter.append(outputBuilder.toString());
+				fileWriter.append(testBuilder.toString());
 				
 			} catch (Exception e) {
 				Logger logger = Logger.getLogger(Release.class.getName());

@@ -1,0 +1,16 @@
+
+9logic.Ticket#getResolutionDate()Ljava/time/LocalDateTime;K
+AD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/Ticket.java: :('"1*Þ
+1K
+AD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/Ticket.java;	 ;(›
+˜
+K
+AD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/Ticket.java;	 ;(
+%0java.time.LocalDateTime"__id*$*"
+logic.Ticket"
+resolutionDate"n
+K
+AD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/Ticket.java; ;(
+
+%0java.time.LocalDateTimeB
+logic.Ticket

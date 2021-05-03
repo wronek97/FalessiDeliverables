@@ -134,47 +134,34 @@ public class WekaTools{
 				j48Classifier.buildClassifier(training);
 				evaluationsList[2].evaluateModel(j48Classifier, testing);
 				
+				NumberFormat numberFormat;
+				String separator;
 				if(mode == CSV_Mode.IT) {
-					NumberFormat nf = NumberFormat.getInstance(Locale.ITALY);
-				    nf.setGroupingUsed(false);
-				    
-					for (int i = 0; i < classifiersList.length; i++) {
-						outputBuilder.append((k+1) + ";");
-						outputBuilder.append(classifiersList[i] + ";");
-						outputBuilder.append(nf.format(evaluationsList[i].truePositiveRate(1)) + ";");
-						outputBuilder.append(nf.format(evaluationsList[i].falsePositiveRate(1)) + ";");
-						outputBuilder.append(nf.format(evaluationsList[i].precision(1)) + ";");
-						outputBuilder.append(nf.format(evaluationsList[i].recall(1)) + ";");
-						outputBuilder.append(nf.format(evaluationsList[i].areaUnderROC(1)) + ";");
-						outputBuilder.append(nf.format(evaluationsList[i].truePositiveRate(0)) + ";");
-						outputBuilder.append(nf.format(evaluationsList[i].falsePositiveRate(0)) + ";");
-						outputBuilder.append(nf.format(evaluationsList[i].precision(0)) + ";");
-						outputBuilder.append(nf.format(evaluationsList[i].recall(0)) + ";");
-						outputBuilder.append(nf.format(evaluationsList[i].areaUnderROC(0)) + ";");
-						outputBuilder.append(nf.format(evaluationsList[i].kappa()) + ";");
-						outputBuilder.append(nf.format(evaluationsList[i].pctCorrect()/100) + "\n");
-					}
+					numberFormat = NumberFormat.getInstance(Locale.ITALY);
+				    numberFormat.setGroupingUsed(false);
+				    separator = ";";
 				}
 				else {
-					NumberFormat nf = NumberFormat.getInstance(Locale.US);
-				    nf.setGroupingUsed(false);
-				    
-					for (int i = 0; i < classifiersList.length; i++) {
-						outputBuilder.append((k+1) + ",");
-						outputBuilder.append(classifiersList[i] + ",");
-						outputBuilder.append(nf.format(evaluationsList[i].truePositiveRate(1)) + ",");
-						outputBuilder.append(nf.format(evaluationsList[i].falsePositiveRate(1)) + ",");
-						outputBuilder.append(nf.format(evaluationsList[i].precision(1)) + ",");
-						outputBuilder.append(nf.format(evaluationsList[i].recall(1)) + ",");
-						outputBuilder.append(nf.format(evaluationsList[i].areaUnderROC(1)) + ",");
-						outputBuilder.append(nf.format(evaluationsList[i].truePositiveRate(0)) + ",");
-						outputBuilder.append(nf.format(evaluationsList[i].falsePositiveRate(0)) + ",");
-						outputBuilder.append(nf.format(evaluationsList[i].precision(0)) + ",");
-						outputBuilder.append(nf.format(evaluationsList[i].recall(0)) + ",");
-						outputBuilder.append(nf.format(evaluationsList[i].areaUnderROC(0)) + ",");
-						outputBuilder.append(nf.format(evaluationsList[i].kappa()) + ",");
-						outputBuilder.append(nf.format(evaluationsList[i].pctCorrect()) + "\n");
-					}
+					numberFormat = NumberFormat.getInstance(Locale.US);
+				    numberFormat.setGroupingUsed(false);
+				    separator = ",";
+				}
+				
+				for (int i = 0; i < classifiersList.length; i++) {
+					outputBuilder.append((k+1) + ";");
+					outputBuilder.append(classifiersList[i] + ";");
+					outputBuilder.append(numberFormat.format(evaluationsList[i].truePositiveRate(1)) + separator);
+					outputBuilder.append(numberFormat.format(evaluationsList[i].falsePositiveRate(1)) + separator);
+					outputBuilder.append(numberFormat.format(evaluationsList[i].precision(1)) + separator);
+					outputBuilder.append(numberFormat.format(evaluationsList[i].recall(1)) + separator);
+					outputBuilder.append(numberFormat.format(evaluationsList[i].areaUnderROC(1)) + separator);
+					outputBuilder.append(numberFormat.format(evaluationsList[i].truePositiveRate(0)) + separator);
+					outputBuilder.append(numberFormat.format(evaluationsList[i].falsePositiveRate(0)) + separator);
+					outputBuilder.append(numberFormat.format(evaluationsList[i].precision(0)) + separator);
+					outputBuilder.append(numberFormat.format(evaluationsList[i].recall(0)) + separator);
+					outputBuilder.append(numberFormat.format(evaluationsList[i].areaUnderROC(0)) + separator);
+					outputBuilder.append(numberFormat.format(evaluationsList[i].kappa()) + separator);
+					outputBuilder.append(numberFormat.format(evaluationsList[i].pctCorrect()/100) + "\n");
 				}
 			}
 			fileWriter.append(outputBuilder.toString());
