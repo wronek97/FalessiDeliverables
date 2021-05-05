@@ -1,17 +1,0 @@
-
-,logic.Ticket#getTicketID()Ljava/lang/String;K
-AD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/Ticket.java* *("1*Ê
-1K
-AD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/Ticket.java+	 +(Ž
-‹
-K
-AD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/Ticket.java+	 +(
-%0java.lang.String"__id**
-logic.Ticket"
-
-ticketID"g
-K
-AD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/Ticket.java+ +(
-
-%0java.lang.StringB
-logic.Ticket

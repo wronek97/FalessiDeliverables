@@ -1,42 +1,0 @@
-
-Hlogic.Release#isAlreadyAdded(Ljava/time/LocalDateTime;Ljava/util/List;)ZL
-BD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/Release.javas s(&"2*ë
-2L
-BD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/Release.javat t(t
-r
-L
-BD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/Release.javat t(
-rellogic.Release"__id*
-""™
-–
-L
-BD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/Release.javat t(
-rellogic.Release"
-__arrayGet*
-
-releasesjava.util.List*
-""*
-4
-1*©
-3L
-BD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/Release.javav v("V
-L
-BD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/Release.javav v(
-""*¯
-4L
-BD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/Release.javau u(ÓÐ
-L
-BD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/Release.javau u(*
-%0java.time.LocalDateTime"7logic.Release#getReleaseDate()Ljava/time/LocalDateTime;*
-
-rellogic.Release2getReleaseDate()*
-2
-3*©
-1L
-BD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/Release.javay	 y("V
-L
-BD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/Release.javay y(
-"":&
-releaseDatejava.time.LocalDateTime:
-releasesjava.util.ListB"
-logic.Release

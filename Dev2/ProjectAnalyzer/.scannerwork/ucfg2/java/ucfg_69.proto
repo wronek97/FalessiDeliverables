@@ -1,17 +1,0 @@
-
-3logic.Ticket#getOpenDate()Ljava/time/LocalDateTime;K
-AD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/Ticket.java2 2(!"1*Ø
-1K
-AD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/Ticket.java3	 3(•
-’
-K
-AD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/Ticket.java3	 3(
-%0java.time.LocalDateTime"__id**
-logic.Ticket"
-
-openDate"n
-K
-AD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/Ticket.java3 3(
-
-%0java.time.LocalDateTimeB
-logic.Ticket

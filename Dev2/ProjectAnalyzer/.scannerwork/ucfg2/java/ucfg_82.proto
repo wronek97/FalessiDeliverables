@@ -1,64 +1,0 @@
-
-/logic.Ticket#getProportional(Ljava/util/List;)IM
-AD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/Ticket.java´ ´(#"4*Â
-2M
-AD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/Ticket.javaÆ Æ(”
-‘
-M
-AD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/Ticket.javaÆ Æ(!
-
-%3long"java.lang.Math#round(D)J*"
-java.lang.Math*
-"""W
-M
-AD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/Ticket.javaÆ Æ("
-""*ê
-4M
-AD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/Ticket.java¼ ¼(r
-p
-M
-AD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/Ticket.java¼ ¼(
-tlogic.Ticket"__id*
-""–
-“
-M
-AD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/Ticket.java¼ ¼(
-tlogic.Ticket"
-__arrayGet*
-
-ticketsjava.util.List*
-""*	
-2
-6
-1*§
-5M
-AD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/Ticket.java¿	 ¿(
-¤¡
-M
-AD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/Ticket.java¿	 ¿(	
-%1int"logic.Ticket#getOpenVersion()I*
-
-tlogic.Ticket2getOpenVersion()¦£
-M
-AD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/Ticket.javaÀ	 À(	
-%2int"logic.Ticket#getFixedVersion()I*
-
-tlogic.Ticket2getFixedVersion()*
-4*‰
-6M
-AD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/Ticket.java½ ½(	¬©
-M
-AD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/Ticket.java½ ½(	
-%0int""logic.Ticket#getInjectedVersion()I*
-
-tlogic.Ticket2getInjectedVersion()*
-4
-5*«
-1M
-AD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/Ticket.javaÉ	 É(
-"W
-M
-AD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/Ticket.javaÉ É(
-"":
-ticketsjava.util.ListB"
-logic.Ticket
