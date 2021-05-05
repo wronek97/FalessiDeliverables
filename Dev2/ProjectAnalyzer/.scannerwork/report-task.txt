@@ -1,7 +1,0 @@
-organization=wronek97org
-projectKey=wronek97_ProjectAnalyzer
-serverUrl=https://sonarcloud.io
-serverVersion=8.0.0.19797
-dashboardUrl=https://sonarcloud.io/dashboard?id=wronek97_ProjectAnalyzer
-ceTaskId=AXk0YEn3tkUgJLSlUbVS
-ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AXk0YEn3tkUgJLSlUbVS

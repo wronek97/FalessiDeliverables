@@ -1,5 +1,6 @@
 package logic;
 
+import weka.core.Instance;
 import weka.core.Instances;
 import java.io.File;
 import java.io.FileWriter;
@@ -29,7 +30,7 @@ public class WekaTools{
 	
 	private WekaTools() {
 	    throw new IllegalStateException("WekaTools is a static class");
-	  }
+	}
 	
 	public static void convertCsvToArff(String csvSource, String arffOutput) {
 		CSVLoader loader = new CSVLoader();
@@ -87,6 +88,61 @@ public class WekaTools{
 		
 		for(String file : files) {
 			WekaTools.convertCsvToArff(file, file.replace(CSV, ARFF));
+		}
+	}
+	
+	public static void generateArff(String sourcesPath, String csvSource, String arffOutput) {
+		CSVLoader loader = new CSVLoader();
+		String fileName = csvSource.replace(sourcesPath, "").replace("\\", "").replace(CSV, "");
+		
+		try (FileWriter fileWriter = new FileWriter(arffOutput)) {
+			StringBuilder outputBuilder = new StringBuilder("");
+			outputBuilder.append("@relation " + fileName + "\n\n");
+			outputBuilder.append("@attribute Version numeric\n");
+			outputBuilder.append("@attribute Size numeric\n");
+			outputBuilder.append("@attribute LOC_touched numeric\n");
+			outputBuilder.append("@attribute LOC_added numeric\n");
+			outputBuilder.append("@attribute MAX_LOC_added numeric\n");
+			outputBuilder.append("@attribute AVG_LOC_added numeric\n");
+			outputBuilder.append("@attribute Churn numeric\n");
+			outputBuilder.append("@attribute MAX_Churn numeric\n");
+			outputBuilder.append("@attribute AVG_Churn numeric\n");
+			outputBuilder.append("@attribute NR numeric\n");
+			outputBuilder.append("@attribute NF numeric\n");
+			outputBuilder.append("@attribute Bugged {false,true}\n\n");
+			outputBuilder.append("@data\n");
+			
+			fileWriter.append(outputBuilder.toString());
+			
+			// load CSV
+			loader.setSource(new File(csvSource));
+			Instances data = loader.getDataSet();
+	
+			// save ARFF
+			if(!data.isEmpty()) {
+				for(Instance ins : data) {
+					fileWriter.append(ins.toString() + "\n");
+				}
+			}
+			
+		} catch (IOException e) {
+			Logger logger = Logger.getLogger(WekaTools.class.getName());
+			logger.log(Level.SEVERE, "Error generating arffs", e);
+		}
+		
+	}
+	
+	public static void generateAllArff(String sourcesPath) {
+		List<String> files = null;
+		try (Stream<Path> walk = Files.walk(Paths.get(sourcesPath))) {
+			files = walk.map(Path::toString).filter(f -> f.endsWith(CSV)).collect(Collectors.toList());
+		} catch (IOException e) {
+			Logger logger = Logger.getLogger(WekaTools.class.getName());
+			logger.log(Level.SEVERE, "Error generating arffs", e);
+	    }
+		
+		for(String file : files) {
+			WekaTools.generateArff(sourcesPath, file, file.replace(CSV, ARFF));
 		}
 	}
 	
@@ -148,8 +204,8 @@ public class WekaTools{
 				}
 				
 				for (int i = 0; i < classifiersList.length; i++) {
-					outputBuilder.append((k+1) + ";");
-					outputBuilder.append(classifiersList[i] + ";");
+					outputBuilder.append((k+1) + separator);
+					outputBuilder.append(classifiersList[i] + separator);
 					outputBuilder.append(numberFormat.format(evaluationsList[i].truePositiveRate(1)) + separator);
 					outputBuilder.append(numberFormat.format(evaluationsList[i].falsePositiveRate(1)) + separator);
 					outputBuilder.append(numberFormat.format(evaluationsList[i].precision(1)) + separator);

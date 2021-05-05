@@ -1,603 +1,0 @@
-
-Xlogic.FileMetrics#saveTestsForML(Ljava/lang/String;Ljava/util/List;Ljava/lang/Integer;)VR
-FD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/FileMetrics.javaÜ Ü(""47*Ü
-46R
-FD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/FileMetrics.javaâ â(	¢ü
-R
-FD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/FileMetrics.javaâ â(
-%5boolean"java.io.File#mkdirs()Z*
-
-mlPathjava.io.File2mkdirs()*
-43
-0*ò
-24R
-FD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/FileMetrics.javaö/ ö(2è
-å
-R
-FD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/FileMetrics.javaö ö(2
-%38java.lang.String"__concat*
-
-
-%37int*
-,•¢
-R
-FD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/FileMetrics.javaö ö(3
-%39java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*(
-&
-testBuilderjava.lang.StringBuilder*
-
-%38java.lang.String2append(Ljava/lang/String;)*
-23*Ä
-47R
-FD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/FileMetrics.javaá á(!|
-z
-R
-FD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/FileMetrics.javaá$ á(4
-%0java.lang.String"__id*
-""≥
-∞
-R
-FD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/FileMetrics.javaá á(4
-%1java.lang.String"__concat*
-
-savePathjava.lang.String*
-
-%0java.lang.Stringxv
-R
-FD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/FileMetrics.javaá á(
-%2java.io.File"java.io.File∑
-¥
-R
-FD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/FileMetrics.javaá á(5
-%3"(java.io.File#<init>(Ljava/lang/String;)V*
-
-%2java.io.File*
-
-%1java.lang.Stringã
-à
-R
-FD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/FileMetrics.javaá á(6
-mlPathjava.io.File"__id*
-
-%2java.io.File¢ü
-R
-FD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/FileMetrics.javaà à(
-%4boolean"java.io.File#exists()Z*
-
-mlPathjava.io.File2exists()*
-46
-43
-0*ñ
-25R
-FD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/FileMetrics.javaö ö(µ≤
-R
-FD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/FileMetrics.javaö ö(,
-
-%37int"#logic.FileMetrics#getMAXLOCadded()I*
-
-fmlogic.FileMetrics2getMAXLOCadded()*
-24*ò
-26R
-FD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/FileMetrics.javaô, ô(/è
-å
-R
-FD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/FileMetrics.javaô ô(/
-%35java.lang.String"__concat*
-
-
-%34int*
-,•¢
-R
-FD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/FileMetrics.javaô ô(0
-%36java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*(
-&
-testBuilderjava.lang.StringBuilder*
-
-%35java.lang.String2append(Ljava/lang/String;)*
-25*ê
-27R
-FD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/FileMetrics.javaô ô(Ø¨
-R
-FD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/FileMetrics.javaô ô()
-
-%34int" logic.FileMetrics#getLOCadded()I*
-
-fmlogic.FileMetrics2getLOCadded()*
-26*ò
-28R
-FD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/FileMetrics.javaò. ò(1è
-å
-R
-FD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/FileMetrics.javaò ò(1
-%32java.lang.String"__concat*
-
-
-%31int*
-,•¢
-R
-FD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/FileMetrics.javaò ò(2
-%33java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*(
-&
-testBuilderjava.lang.StringBuilder*
-
-%32java.lang.String2append(Ljava/lang/String;)*
-27*î
-29R
-FD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/FileMetrics.javaò ò(≥∞
-R
-FD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/FileMetrics.javaò ò(+
-
-%31int""logic.FileMetrics#getLOCtouched()I*
-
-fmlogic.FileMetrics2getLOCtouched()*
-28*ò
-30R
-FD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/FileMetrics.javaó( ó(+è
-å
-R
-FD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/FileMetrics.javaó ó(+
-%29java.lang.String"__concat*
-
-
-%28int*
-,•¢
-R
-FD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/FileMetrics.javaó ó(,
-%30java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*(
-&
-testBuilderjava.lang.StringBuilder*
-
-%29java.lang.String2append(Ljava/lang/String;)*
-29*à
-31R
-FD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/FileMetrics.javaó ó(ß§
-R
-FD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/FileMetrics.javaó ó(%
-
-%28int"logic.FileMetrics#getSize()I*
-
-fmlogic.FileMetrics2	getSize()*
-30*∂
-32R
-FD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/FileMetrics.javañ) ñ(*é
-ã
-R
-FD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/FileMetrics.javañ ñ(*
-%25java.lang.String"__concat*
-
-
-%24int*2ú
-ô
-R
-FD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/FileMetrics.javañ ñ(0
-%26java.lang.String"__concat*
-
-%25java.lang.String*
-,•¢
-R
-FD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/FileMetrics.javañ ñ(1
-%27java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*(
-&
-testBuilderjava.lang.StringBuilder*
-
-%26java.lang.String2append(Ljava/lang/String;)*
-31*ó
-10R
-FD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/FileMetrics.java†& †()è
-å
-R
-FD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/FileMetrics.java† †()
-%58java.lang.String"__concat*
-
-
-%57int*
-,•¢
-R
-FD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/FileMetrics.java† †(*
-%59java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*(
-&
-testBuilderjava.lang.StringBuilder*
-
-%58java.lang.String2append(Ljava/lang/String;)*
-9*é
-33R
-FD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/FileMetrics.javañ ñ(≠™
-R
-FD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/FileMetrics.javañ ñ((
-
-%24int"logic.FileMetrics#getVersion()I*
-
-fmlogic.FileMetrics2getVersion()*
-32*Ñ
-11R
-FD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/FileMetrics.java† †(£†
-R
-FD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/FileMetrics.java† †(#
-
-%57int"logic.FileMetrics#getNF()I*
-
-fmlogic.FileMetrics2getNF()*
-10*ò
-12R
-FD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/FileMetrics.javaü& ü()è
-å
-R
-FD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/FileMetrics.javaü ü()
-%55java.lang.String"__concat*
-
-
-%54int*
-,•¢
-R
-FD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/FileMetrics.javaü ü(*
-%56java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*(
-&
-testBuilderjava.lang.StringBuilder*
-
-%55java.lang.String2append(Ljava/lang/String;)*
-11*ë
-35R
-FD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/FileMetrics.javaï ï(
-≠™
-R
-FD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/FileMetrics.javaï ï(
-
-%23int"logic.FileMetrics#getVersion()I*
-
-fmlogic.FileMetrics2getVersion()*
-7
-33*Ñ
-13R
-FD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/FileMetrics.javaü ü(£†
-R
-FD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/FileMetrics.javaü ü(#
-
-%54int"logic.FileMetrics#getNR()I*
-
-fmlogic.FileMetrics2getNR()*
-12*•
-14R
-FD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/FileMetrics.javaû7 û(:ú
-ô
-R
-FD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/FileMetrics.javaû û(:
-%52java.lang.String"__concat*
-
-%51java.lang.String*
-,•¢
-R
-FD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/FileMetrics.javaû û(;
-%53java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*(
-&
-testBuilderjava.lang.StringBuilder*
-
-%52java.lang.String2append(Ljava/lang/String;)*
-13*À
-37R
-FD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/FileMetrics.javaë ë(:ú
-ô
-R
-FD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/FileMetrics.javaë ë(:
-nfjava.text.NumberFormat"__id*
-
-%21java.text.NumberFormatÃ…
-R
-FD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/FileMetrics.javaí í( 
-%22void"*java.text.NumberFormat#setGroupingUsed(Z)V*
-
-nfjava.text.NumberFormat*
-""2setGroupingUsed(Z)*
-7*¡
-15R
-FD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/FileMetrics.javaû û(4‡›
-R
-FD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/FileMetrics.javaû û(4
-%51java.lang.String"2java.text.NumberFormat#format(D)Ljava/lang/String;*
-
-nfjava.text.NumberFormat*
-
-%50double2	format(D)*
-14*á
-38R
-FD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/FileMetrics.javaê ê(bß
-§
-R
-FD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/FileMetrics.javaê ê(b&
-testBuilderjava.lang.StringBuilder"__id* 
-
-%18java.lang.StringBuilder}
-{
-R
-FD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/FileMetrics.javaë/ ë(8
-%20java.util.Locale"__id*
-""˝
-˙
-R
-FD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/FileMetrics.javaë ë(9
-%21java.text.NumberFormat"Njava.text.NumberFormat#getInstance(Ljava/util/Locale;)Ljava/text/NumberFormat;*"
-java.text.NumberFormat*
-
-%20java.util.Locale*
-37*ì
-16R
-FD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/FileMetrics.javaû û(≤Ø
-R
-FD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/FileMetrics.javaû# û(3
-%50double" logic.FileMetrics#getAVGchurn()D*
-
-fmlogic.FileMetrics2getAVGchurn()*
-15*ƒ
-39R
-FD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/FileMetrics.javaê  ê(aêç
-R
-FD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/FileMetrics.javaê$ ê(1
-%18java.lang.StringBuilder"java.lang.StringBuilder–
-Õ
-R
-FD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/FileMetrics.javaê  ê(a
-%19"3java.lang.StringBuilder#<init>(Ljava/lang/String;)V* 
-
-%18java.lang.StringBuilder*
-
-%17java.lang.String*
-38*ò
-17R
-FD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/FileMetrics.javaù, ù(/è
-å
-R
-FD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/FileMetrics.javaù ù(/
-%48java.lang.String"__concat*
-
-
-%47int*
-,•¢
-R
-FD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/FileMetrics.javaù ù(0
-%49java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*(
-&
-testBuilderjava.lang.StringBuilder*
-
-%48java.lang.String2append(Ljava/lang/String;)*
-16*ê
-18R
-FD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/FileMetrics.javaù ù(Ø¨
-R
-FD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/FileMetrics.javaù ù()
-
-%47int" logic.FileMetrics#getMAXchurn()I*
-
-fmlogic.FileMetrics2getMAXchurn()*
-17*ò
-19R
-FD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/FileMetrics.javaú) ú(,è
-å
-R
-FD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/FileMetrics.javaú ú(,
-%45java.lang.String"__concat*
-
-
-%44int*
-,•¢
-R
-FD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/FileMetrics.javaú ú(-
-%46java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*(
-&
-testBuilderjava.lang.StringBuilder*
-
-%45java.lang.String2append(Ljava/lang/String;)*
-18*p
-0 "i
-R
-FD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/FileMetrics.java¨ ¨(
-implicit return*ˇ
-5R
-FD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/FileMetrics.java§ §(-úô
-R
-FD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/FileMetrics.java§ §(-
-%64java.io.Writer"Kjava.io.OutputStreamWriter#append(Ljava/lang/CharSequence;)Ljava/io/Writer;*"
- 
-
-fileWriterjava.io.FileWriter*
-
-%63java.lang.String2 append(Ljava/lang/CharSequence;)*
-43
-0*ª
-6R
-FD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/FileMetrics.java§ §(‹Ÿ
-R
-FD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/FileMetrics.java§ §(,
-%63java.lang.String"4java.lang.StringBuilder#toString()Ljava/lang/String;*(
-&
-testBuilderjava.lang.StringBuilder2
-toString()*
-5*á
-7R
-FD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/FileMetrics.javaî	 î(}
-{
-R
-FD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/FileMetrics.javaî	 î(
-fmlogic.FileMetrics"__id*
-""•
-¢
-R
-FD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/FileMetrics.javaî	 î(
-fmlogic.FileMetrics"
-__arrayGet*
-
-fileMetricsjava.util.List*
-""*
-35
-6*õ
-8R
-FD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/FileMetrics.java°) °(-î
-ë
-R
-FD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/FileMetrics.java° °(-
-%61java.lang.String"__concat*
-
-%60boolean*
-\n•¢
-R
-FD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/FileMetrics.java° °(.
-%62java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*(
-&
-testBuilderjava.lang.StringBuilder*
-
-%61java.lang.String2append(Ljava/lang/String;)*
-7*å
-9R
-FD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/FileMetrics.java° °(≠™
-R
-FD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/FileMetrics.java° °(&
-%60boolean"logic.FileMetrics#isBugged()Z*
-
-fmlogic.FileMetrics2
-isBugged()*
-8*ò
-40R
-FD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/FileMetrics.javaêP ê([∑¥
-R
-FD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/FileMetrics.javaê2 ê(`
-%17java.lang.String"\java.lang.String#replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;*
-
-%16java.lang.String*
-	FileName,* 29replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)*
-39*Ó
-41R
-FD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/FileMetrics.javaè è(8ú
-ô
-R
-FD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/FileMetrics.javaè è(8 
-
-fileWriterjava.io.FileWriter"__id*
-
-%12java.io.FileWriterà
-Ö
-R
-FD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/FileMetrics.javaê2 ê(:!
-%14logic.FileMetrics$CSV_Mode"__id*
-""à
-Ö
-R
-FD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/FileMetrics.javaê2 ê(=!
-%15logic.FileMetrics$CSV_Mode"__id*
-""ÿ’
-R
-FD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/FileMetrics.javaê2 ê(G
-%16java.lang.String"6logic.FileMetrics$CSV_Mode#getArgs()Ljava/lang/String;*#
-!
-%15logic.FileMetrics$CSV_Mode2	getArgs()*
-40*µ
-42R
-FD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/FileMetrics.javaè/ è(7ÜÉ
-R
-FD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/FileMetrics.javaè$ è(.
-%12java.io.FileWriter"java.io.FileWriterÀ
-»
-R
-FD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/FileMetrics.javaè  è(8
-%13".java.io.FileWriter#<init>(Ljava/lang/String;)V*
-
-%12java.io.FileWriter*
-
-testFilejava.lang.String*
-41*ä
-20R
-FD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/FileMetrics.javaú ú(©¶
-R
-FD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/FileMetrics.javaú ú(&
-
-%44int"logic.FileMetrics#getChurn()I*
-
-fmlogic.FileMetrics2
-getChurn()*
-19*™	
-43R
-FD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/FileMetrics.javaç ç(|
-z
-R
-FD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/FileMetrics.javaç  ç(0
-%6java.lang.String"__id*
-""≥
-∞
-R
-FD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/FileMetrics.javaç ç(0
-%7java.lang.String"__concat*
-
-savePathjava.lang.String*
-
-%6java.lang.Stringõ
-ò
-R
-FD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/FileMetrics.javaç ç(7
-%8java.lang.String"__concat*
-
-%7java.lang.String*
-\\ù
-ö
-R
-FD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/FileMetrics.javaç ç(@
-%9java.lang.String"__concat*
-
-%8java.lang.String*
-Testú
-ô
-R
-FD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/FileMetrics.javaç ç(H
-%10java.lang.String"__concat*
-
-%9java.lang.String*
-""ü
-ú
-R
-FD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/FileMetrics.javaç ç(Q
-%11java.lang.String"__concat*
-
-%10java.lang.String*
-.csvñ
-ì
-R
-FD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/FileMetrics.javaç ç(R
-testFilejava.lang.String"__id*
-
-%11java.lang.String*
-42*•
-21R
-FD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/FileMetrics.javaõ: õ(=ú
-ô
-R
-FD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/FileMetrics.javaõ õ(=
-%42java.lang.String"__concat*
-
-%41java.lang.String*
-,•¢
-R
-FD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/FileMetrics.javaõ õ(>
-%43java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*(
-&
-testBuilderjava.lang.StringBuilder*
-
-%42java.lang.String2append(Ljava/lang/String;)*
-20*¡
-22R
-FD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/FileMetrics.javaõ õ(7‡›
-R
-FD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/FileMetrics.javaõ õ(7
-%41java.lang.String"2java.text.NumberFormat#format(D)Ljava/lang/String;*
-
-nfjava.text.NumberFormat*
-
-%40double2	format(D)*
-21*ô
-23R
-FD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/FileMetrics.javaõ õ(∏µ
-R
-FD:/FalessiDeliverables/Dev2/ProjectAnalyzer/src/logic/FileMetrics.javaõ# õ(6
-%40double"#logic.FileMetrics#getAVGLOCadded()D*
-
-fmlogic.FileMetrics2getAVGLOCadded()*
-22:
-savePathjava.lang.String:
-fileMetricsjava.util.List:&
-versionsToAnalyzejava.lang.IntegerB"
-logic.FileMetrics
