@@ -67,7 +67,7 @@ public class Analyzer {
 			FileMetrics.saveTestsForML(SAVE_PATH, fileMetrics, versionsToAnalyze);
 			
 			WekaTools.generateAllArff(SOURCES_PATH);
-			WekaTools.walkForward(SOURCES_PATH, versionsToAnalyze, SAVE_PATH, PROJECT_NAME, CSV_Mode.IT);
+			WekaTools.walkForwardToCSV(SOURCES_PATH, versionsToAnalyze, SAVE_PATH, PROJECT_NAME, CSV_Mode.IT);
 			
 		} catch (JSONException | IOException e) {
 			logger.log(Level.SEVERE, ERROR, e);
